@@ -135,3 +135,5 @@ datasets/*/
 weights/
 
 .DS_Store
+
+experiments/venv/
