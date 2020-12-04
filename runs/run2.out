@@ -1,0 +1,368 @@
+
+
+Epoch 0/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:30
+201 / 264 34 seconds
+ETA: 0:00:11
+train Loss: 4.5682 Acc: 0.0814
+1 / 114 0 seconds
+ETA: 0:00:10
+val Loss: 4.8776 Acc: 0.0890
+UPDATE: 0.0 to tensor(0.0890, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 1/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 31 seconds
+ETA: 0:00:10
+train Loss: 3.4605 Acc: 0.2036
+1 / 114 0 seconds
+ETA: 0:00:10
+val Loss: 3.5537 Acc: 0.1957
+UPDATE: tensor(0.0890, device='cuda:0', dtype=torch.float64) to tensor(0.1957, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 2/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 2.9594 Acc: 0.2872
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 3.0265 Acc: 0.2814
+UPDATE: tensor(0.1957, device='cuda:0', dtype=torch.float64) to tensor(0.2814, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 3/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 2.6726 Acc: 0.3452
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 3.1186 Acc: 0.2946
+UPDATE: tensor(0.2814, device='cuda:0', dtype=torch.float64) to tensor(0.2946, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 4/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 2.3747 Acc: 0.4018
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.7836 Acc: 0.3577
+UPDATE: tensor(0.2946, device='cuda:0', dtype=torch.float64) to tensor(0.3577, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 5/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:19
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 2.2625 Acc: 0.4268
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 2.7885 Acc: 0.3427
+
+Epoch 6/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 2.0967 Acc: 0.4695
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 3.2806 Acc: 0.3212
+
+Epoch 7/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 1.9133 Acc: 0.5069
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.6367 Acc: 0.4057
+UPDATE: tensor(0.3577, device='cuda:0', dtype=torch.float64) to tensor(0.4057, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 8/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:20
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 1.7435 Acc: 0.5476
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.4819 Acc: 0.4339
+UPDATE: tensor(0.4057, device='cuda:0', dtype=torch.float64) to tensor(0.4339, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 9/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 1.7079 Acc: 0.5566
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.7406 Acc: 0.4146
+
+Epoch 10/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:19
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 1.5878 Acc: 0.5772
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.4560 Acc: 0.4356
+UPDATE: tensor(0.4339, device='cuda:0', dtype=torch.float64) to tensor(0.4356, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 11/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 1.5421 Acc: 0.5904
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.4651 Acc: 0.4494
+UPDATE: tensor(0.4356, device='cuda:0', dtype=torch.float64) to tensor(0.4494, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 12/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 1.4761 Acc: 0.6117
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.6001 Acc: 0.4334
+
+Epoch 13/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:20
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 1.4233 Acc: 0.6214
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 2.2673 Acc: 0.4721
+UPDATE: tensor(0.4494, device='cuda:0', dtype=torch.float64) to tensor(0.4721, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 14/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.9906 Acc: 0.7559
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 1.7256 Acc: 0.5943
+UPDATE: tensor(0.4721, device='cuda:0', dtype=torch.float64) to tensor(0.5943, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 15/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:20
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.7904 Acc: 0.8002
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.7374 Acc: 0.6053
+UPDATE: tensor(0.5943, device='cuda:0', dtype=torch.float64) to tensor(0.6053, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 16/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.7367 Acc: 0.8172
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.7350 Acc: 0.5915
+
+Epoch 17/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:20
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.7314 Acc: 0.8194
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.6241 Acc: 0.6147
+UPDATE: tensor(0.6053, device='cuda:0', dtype=torch.float64) to tensor(0.6147, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 18/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:23
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.7138 Acc: 0.8260
+1 / 114 0 seconds
+ETA: 0:00:10
+val Loss: 1.6942 Acc: 0.6081
+
+Epoch 19/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.6678 Acc: 0.8350
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 1.6215 Acc: 0.6230
+UPDATE: tensor(0.6147, device='cuda:0', dtype=torch.float64) to tensor(0.6230, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 20/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.6761 Acc: 0.8305
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.6260 Acc: 0.6219
+
+Epoch 21/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.6426 Acc: 0.8468
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 1.6559 Acc: 0.6230
+
+Epoch 22/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.6159 Acc: 0.8490
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.6028 Acc: 0.6285
+UPDATE: tensor(0.6230, device='cuda:0', dtype=torch.float64) to tensor(0.6285, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 23/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.6260 Acc: 0.8459
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.6053 Acc: 0.6307
+UPDATE: tensor(0.6285, device='cuda:0', dtype=torch.float64) to tensor(0.6307, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 24/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.6573 Acc: 0.8338
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 1.6352 Acc: 0.6307
+
+Epoch 25/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.5977 Acc: 0.8527
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 1.5642 Acc: 0.6462
+UPDATE: tensor(0.6307, device='cuda:0', dtype=torch.float64) to tensor(0.6462, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/resnet50_CUB200_30_2020-11-30 11:44:12.265831
+
+Epoch 26/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.5697 Acc: 0.8688
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.5609 Acc: 0.6357
+
+Epoch 27/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:19
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.5758 Acc: 0.8582
+1 / 114 0 seconds
+ETA: 0:00:09
+val Loss: 1.6299 Acc: 0.6302
+
+Epoch 28/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:21
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.6008 Acc: 0.8539
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 1.6230 Acc: 0.6280
+
+Epoch 29/29
+----------
+1 / 264 0 seconds
+ETA: 0:00:22
+201 / 264 30 seconds
+ETA: 0:00:09
+train Loss: 0.5348 Acc: 0.8646
+1 / 114 0 seconds
+ETA: 0:00:08
+val Loss: 1.6170 Acc: 0.6318
+
+Training complete in 26m 19s
+Best val Acc: 0.646213
