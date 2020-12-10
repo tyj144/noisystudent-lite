@@ -1,0 +1,1581 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 15836529
+##  Job Name : StudentCub
+##  Nodelist : gpu2007
+##      CPUs : 
+##  Mem/Node : 4096 MB
+## Directory : /gpfs/home/tjiang12
+##   Started : Tue Dec  8 00:00:26 EST 2020
+###############################################################################
+module: unloading 'python/2.7.12'
+module: loading 'python/3.7.4'
+/users/tjiang12/scratch/resnet50_CUB200_66pct
+Epoch 0/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:01:00
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 93,  93,  52, 102, 101,  25,  93,  30, 189,  93], device='cuda:0') tensor([100, 145, 192,  88, 116,  63,  20, 162,  52, 105], device='cuda:0') tensor(0, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 10, 173, 183, 144, 185,  70, 174, 132, 153, 109], device='cuda:0') tensor([ 10, 167, 149, 143,   1,  70, 168, 170,  42, 109], device='cuda:0') tensor(3, device='cuda:0') out of 10
+train Loss: 3.5319 Acc: 0.2116
+1 / 111 0 seconds
+ETA: 0:00:54
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 80, 175,  59,  70,  59,  80, 101, 171,  88,  45], device='cuda:0') tensor([158, 181,  83, 119,  65,  80, 101, 171,  88,  86], device='cuda:0') tensor(4, device='cuda:0') out of 10
+val Loss: 2.8634 Acc: 0.3077
+UPDATE: 0.0 to tensor(0.3077, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 1/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([ 66, 132,  31,  30, 121,  96, 198, 178,  95, 187], device='cuda:0') tensor([ 68, 132, 185, 192, 121, 157, 198, 180,  94, 190], device='cuda:0') tensor(3, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([108,  48, 117, 163,  71,  54,  48,  39, 158, 123], device='cuda:0') tensor([  9,  29, 192, 163,  71,  54,  48, 114, 158, 122], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 2.4109 Acc: 0.3877
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 39,   0, 196, 175,  84, 155,  72,  39, 175,  34], device='cuda:0') tensor([ 77,  71, 196, 173,  84, 165,  93, 101, 123,  34], device='cuda:0') tensor(3, device='cuda:0') out of 10
+val Loss: 2.4844 Acc: 0.3795
+UPDATE: tensor(0.3077, device='cuda:0', dtype=torch.float64) to tensor(0.3795, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 2/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([ 73, 108,  34,  49, 199, 100,  81,  31,  97, 135], device='cuda:0') tensor([ 28, 180,  55,  52, 199,  44,  91,  48,  95,  70], device='cuda:0') tensor(1, device='cuda:0') out of 10
+201 / 258 73 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([ 49,  51,   8, 194,  20, 142, 176,  73,  82, 113], device='cuda:0') tensor([ 49,  93,  52, 194,  20, 142, 156,  73,  82, 113], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 2.0715 Acc: 0.4650
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([116,  76,  40,  62, 130,  47,  34,  60,  40,  54], device='cuda:0') tensor([ 42,  31, 129,  60, 130,  54,  55,  60,  77,  54], device='cuda:0') tensor(3, device='cuda:0') out of 10
+val Loss: 2.3224 Acc: 0.4157
+UPDATE: tensor(0.3795, device='cuda:0', dtype=torch.float64) to tensor(0.4157, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 3/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([151, 165, 182,  44, 127, 132,  29,  62,  56, 110], device='cuda:0') tensor([151, 160, 183,  61, 127, 116,  29,  83,  56, 111], device='cuda:0') tensor(4, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([  0, 120, 134, 186, 179,   7, 132, 163,  98,   0], device='cuda:0') tensor([  0, 126, 134, 188, 175,  64, 128, 163,  98,   0], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 1.9023 Acc: 0.4983
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.3438, device='cuda:0')
+tensor([103,  42,  75,  14,  55,  40,  42,  82,  82,  97], device='cuda:0') tensor([  5,  36, 110,  14,  41, 111,  38,  82,  78,  94], device='cuda:0') tensor(2, device='cuda:0') out of 10
+val Loss: 2.2350 Acc: 0.4316
+UPDATE: tensor(0.4157, device='cuda:0', dtype=torch.float64) to tensor(0.4316, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 4/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:48
+Pseudolabel acc.: tensor(0.4375, device='cuda:0')
+tensor([165, 103,  55, 129,  80,  87,  51, 161, 182, 122], device='cuda:0') tensor([165, 103, 184, 192,  80,  87,  51, 161, 117, 175], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([186,  81, 172,  42,  51, 101, 166, 149, 153, 158], device='cuda:0') tensor([186,  81, 172,  42,  51, 101, 166, 103, 152, 158], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.7920 Acc: 0.5212
+1 / 111 0 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([182,  57,  73,  71,  41,  96, 151,  96,   0, 155], device='cuda:0') tensor([182,  32,  13,  70,  41,  96, 151,  96,  85, 155], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 1.9528 Acc: 0.4890
+UPDATE: tensor(0.4316, device='cuda:0', dtype=torch.float64) to tensor(0.4890, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 5/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:48
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([140, 117, 133, 153,  16, 116,  10, 161,  87, 183], device='cuda:0') tensor([140, 113, 137,  30,  16, 157,  10, 161,  87, 183], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 13, 192, 120, 188, 115, 148,  70,  82,  86, 130], device='cuda:0') tensor([ 14, 196, 120, 188, 128, 149,  70,  82,  88,  12], device='cuda:0') tensor(4, device='cuda:0') out of 10
+train Loss: 1.6853 Acc: 0.5445
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([125, 187,  66, 125,  44, 176, 104, 176,  73,  48], device='cuda:0') tensor([182, 187,  66, 116, 140, 160,  21, 176,  73,  28], device='cuda:0') tensor(4, device='cuda:0') out of 10
+val Loss: 1.9500 Acc: 0.5068
+UPDATE: tensor(0.4890, device='cuda:0', dtype=torch.float64) to tensor(0.5068, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 6/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:46
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([109,  53,  92,  14,  30, 108,  16, 125,  54,  71], device='cuda:0') tensor([119,  13,  92,  14,  30, 108, 148, 123,  54, 110], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([ 71,  79,  46, 182,  40, 152,  86, 127, 145,  72], device='cuda:0') tensor([ 71,   9,  46, 182,  40, 152,  86, 198,  70,  72], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.6509 Acc: 0.5573
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([150, 159,  69,  85,  91, 116, 163,  67,  63, 138], device='cuda:0') tensor([150,  75,  69,  85,  27, 116, 163,  67,  61,  16], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 1.8442 Acc: 0.5074
+UPDATE: tensor(0.5068, device='cuda:0', dtype=torch.float64) to tensor(0.5074, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 7/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 41,  24,  50,  35, 197,  53, 117,  45, 176, 177], device='cuda:0') tensor([ 16,  24,  50,  35, 197,  53, 117,  86, 176, 177], device='cuda:0') tensor(8, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 44,  28, 119, 144, 112,  25, 148,  10,  48,  34], device='cuda:0') tensor([ 52,  28, 119, 140, 112, 134, 148,  49,  23,  34], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 1.5514 Acc: 0.5793
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.4062, device='cuda:0')
+tensor([  0,  87, 119,  29,  24,  85, 135, 189,  84, 117], device='cuda:0') tensor([ 44,  87, 119,  29,  23,  85, 137, 186,  84, 137], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.9487 Acc: 0.5090
+UPDATE: tensor(0.5074, device='cuda:0', dtype=torch.float64) to tensor(0.5090, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 8/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.6875, device='cuda:0')
+tensor([121, 119, 189, 172, 160,  62, 198,  67, 156, 161], device='cuda:0') tensor([121, 119, 189, 172, 160,  62, 195,  67, 156, 161], device='cuda:0') tensor(9, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([192, 180,  45,  13, 114,  55,  92, 116, 127, 155], device='cuda:0') tensor([ 68, 180, 102,  13, 114,  55,  92, 123, 127, 155], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.5225 Acc: 0.5842
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 49,  80,  52, 118,  59, 115, 185,  95, 104,  32], device='cuda:0') tensor([ 49,  80,  52, 129, 144, 112, 185,  94, 104,  37], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.8177 Acc: 0.5099
+UPDATE: tensor(0.5090, device='cuda:0', dtype=torch.float64) to tensor(0.5099, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 9/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.7500, device='cuda:0')
+tensor([ 82, 103,  75, 165,  36, 152,  34,  16, 115,  11], device='cuda:0') tensor([ 82, 109,  75, 165,  38, 152,  34,  34, 115,  11], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 91, 192, 159, 116, 186, 110, 155,  98,  35,  36], device='cuda:0') tensor([ 91, 194, 159, 130, 136,  72, 155,  98,  35, 152], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 1.4866 Acc: 0.5888
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 24, 191, 125,  78, 131, 106, 127, 174, 101, 197], device='cuda:0') tensor([141,  56, 123,   5,  93,  28, 127, 174, 195, 195], device='cuda:0') tensor(2, device='cuda:0') out of 10
+val Loss: 1.7152 Acc: 0.5379
+UPDATE: tensor(0.5099, device='cuda:0', dtype=torch.float64) to tensor(0.5379, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 10/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([ 58,  32, 139,  18,  57, 184,  10, 114, 165,  30], device='cuda:0') tensor([ 59, 134, 139,  92,  57, 184, 113, 116, 165,  32], device='cuda:0') tensor(4, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 54,  51, 119, 198,  84,  68,  23,  91, 189, 164], device='cuda:0') tensor([ 54,  51, 119, 198,  84,  67,  23,  91, 186, 164], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.4242 Acc: 0.6143
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([  3,  71,  66,  40,  65, 135, 130, 149, 132, 168], device='cuda:0') tensor([  3,  40,  67,  78,  65, 135, 116, 102, 127, 175], device='cuda:0') tensor(3, device='cuda:0') out of 10
+val Loss: 1.7162 Acc: 0.5526
+UPDATE: tensor(0.5379, device='cuda:0', dtype=torch.float64) to tensor(0.5526, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 11/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 13, 144,  89, 152,  59, 112,  95,  10, 148,   4], device='cuda:0') tensor([ 13, 144,   7, 152,  64, 112,  95,  95, 127,   4], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.7500, device='cuda:0')
+tensor([  2,  67,  30, 175, 125, 169, 153,  76, 176, 110], device='cuda:0') tensor([  2,  67,  32, 172, 125,  76, 153,  76, 176, 110], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.4120 Acc: 0.6060
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([150, 113,  10,  27,   1, 199, 173,  28, 149,   2], device='cuda:0') tensor([151, 113,  10, 191,  12, 199, 173,  28, 149,   2], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 1.6265 Acc: 0.5707
+UPDATE: tensor(0.5526, device='cuda:0', dtype=torch.float64) to tensor(0.5707, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 12/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([ 13,  57, 190,   9,   5, 167,   8,  91,  72,  30], device='cuda:0') tensor([107,  57, 190,  11,  59, 179,   8,  91, 132,  30], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([160, 174,  29,  12, 101,  90, 179,  18, 176,  48], device='cuda:0') tensor([160, 174,  29,  12,  77, 197, 179,  18, 176,  48], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.4033 Acc: 0.6154
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.4062, device='cuda:0')
+tensor([105,  59, 184, 114, 163,   6, 175,  94,  67, 117], device='cuda:0') tensor([105, 140,  96, 130, 158,  70, 175,  93,  67, 124], device='cuda:0') tensor(3, device='cuda:0') out of 10
+val Loss: 1.7259 Acc: 0.5484
+
+Epoch 13/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 48, 125, 172,  37,  26,   4,  80, 156, 157, 167], device='cuda:0') tensor([ 48, 127, 125,  37,  26,   4, 160, 156, 157, 167], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([102,  37, 107, 123, 162,  33, 115,  36,  18,  77], device='cuda:0') tensor([ 34,  37,  71, 123,   2,  33,  55,  36, 143,  77], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 1.3739 Acc: 0.6143
+1 / 111 0 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 11,  11, 167, 119,  40,  71,  39,  15, 125, 174], device='cuda:0') tensor([ 11, 166, 167, 104,  40,  71,  37,  15, 125,  54], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 1.6943 Acc: 0.5489
+
+Epoch 14/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:48
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 71, 155, 150, 142, 192,  86, 136,  72, 109,  38], device='cuda:0') tensor([ 71, 155,  10,  60, 192,  86, 136,  72, 109,  75], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 69,  98,   4, 173,   9, 116,  13,  13,  57, 142], device='cuda:0') tensor([ 69, 128,  23, 174,   9, 126,  13,  13,  57, 142], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 1.3200 Acc: 0.6315
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.3438, device='cuda:0')
+tensor([142, 110,  10, 166, 106, 144, 110,  48, 140,  77], device='cuda:0') tensor([ 79, 161, 172, 166,  71, 140, 110,   8, 143,  77], device='cuda:0') tensor(3, device='cuda:0') out of 10
+val Loss: 1.5286 Acc: 0.5851
+UPDATE: tensor(0.5707, device='cuda:0', dtype=torch.float64) to tensor(0.5851, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 15/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 95,  95, 189, 107,  27,  72,  86,  95,  38,  93], device='cuda:0') tensor([179,  76, 189, 134,  27,  72,  86,  95,  36,  93], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.7500, device='cuda:0')
+tensor([ 95, 110,  78, 190, 113, 143,  48,  97,  18, 119], device='cuda:0') tensor([ 95, 110,  78, 190, 113, 143,  35,  97,  18, 119], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 1.2953 Acc: 0.6351
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([167,  62, 181,  18,  35, 104, 130,  26, 191, 155], device='cuda:0') tensor([167,  62, 181,  18,  35, 104, 126, 102, 191, 155], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 1.5511 Acc: 0.5840
+
+Epoch 16/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 64,  69, 132, 173, 194,  88,  70,  44,  52,  36], device='cuda:0') tensor([ 64,  69, 196, 173, 135,  88,  40,  44,  52,  36], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 28,  71, 117, 156, 191, 147,  30, 186, 199, 121], device='cuda:0') tensor([ 28,  91, 124, 156, 191, 147, 139, 186, 199, 121], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.2798 Acc: 0.6424
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([174, 148,  75,  11, 142, 174,  51,  56, 110, 127], device='cuda:0') tensor([174, 182,  33,  11,  44,  46,  51,  56, 129,  11], device='cuda:0') tensor(4, device='cuda:0') out of 10
+val Loss: 1.5987 Acc: 0.5679
+
+Epoch 17/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.3750, device='cuda:0')
+tensor([ 37,  61, 134, 118, 155, 136,  71, 155, 182,  39], device='cuda:0') tensor([ 37,  61,   8, 114, 155,  21,  70, 155, 176,  54], device='cuda:0') tensor(4, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 70, 174,  15,  61, 122, 107,  69, 160, 143,  73], device='cuda:0') tensor([ 70, 174,  15,  28, 112,  28,  69, 160, 143,  73], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.2721 Acc: 0.6383
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([120, 143, 108,  17,  95, 164, 119,  86, 101, 191], device='cuda:0') tensor([130, 143, 108,  17,  46, 164, 126,  86, 101, 191], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 1.5772 Acc: 0.5792
+
+Epoch 18/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([149,  59,  82, 118, 128, 104,  56,  11,  71, 116], device='cuda:0') tensor([ 95,  59, 117, 118, 128, 104, 168,  11,  71,  47], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 75, 150,  18,  73,  52, 195, 172, 120,  33,  55], device='cuda:0') tensor([ 75, 150,  18,  73,  52,  68, 172, 193, 119,  47], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 1.2062 Acc: 0.6589
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 18,  76, 127, 140, 172, 199,  28,  95,  54, 113], device='cuda:0') tensor([ 18,  76, 127, 140, 172, 199,  29, 100,  54, 102], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 1.5194 Acc: 0.5868
+UPDATE: tensor(0.5851, device='cuda:0', dtype=torch.float64) to tensor(0.5868, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 19/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([192, 140, 177,  19,  51, 175,  23,  38,  99,  75], device='cuda:0') tensor([192, 140, 177,  19,  51, 175,  23,  38,  99, 121], device='cuda:0') tensor(9, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 32, 153,  38,  46,  19,  91, 144, 188,  48,  72], device='cuda:0') tensor([155, 153,  38,  46, 168,  91, 144, 188,   8,  72], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.1984 Acc: 0.6619
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([127, 133, 150, 118, 165, 118,   9,  79,  64,  51], device='cuda:0') tensor([132,  22, 160, 118, 165, 118,   9,  79,  52,  51], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 1.6072 Acc: 0.5758
+
+Epoch 20/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:48
+Pseudolabel acc.: tensor(0.4375, device='cuda:0')
+tensor([ 64,  36, 158, 143,  90,  31,  54, 119,  70, 119], device='cuda:0') tensor([ 64,  36, 158, 143, 184, 184,  54, 119,  70, 119], device='cuda:0') tensor(8, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([146,  96,  19,  12, 191, 133, 184, 183, 127,  89], device='cuda:0') tensor([146,  96,  19,  12, 191, 133, 184, 183,  41,  57], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.1771 Acc: 0.6654
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([189, 173, 162,  51,  23,  43, 128,  44, 149,  88], device='cuda:0') tensor([189, 173, 178,  45,  23,  48, 128,  44,  77,  88], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 1.4843 Acc: 0.6044
+UPDATE: tensor(0.5868, device='cuda:0', dtype=torch.float64) to tensor(0.6044, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 21/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([131, 103, 191,  45,  49, 161,  19,  11, 163, 152], device='cuda:0') tensor([131, 120, 106,  45,  22, 168,  19,  11, 163, 156], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([101, 160, 197, 146, 182,   6,  59, 192,  36,  15], device='cuda:0') tensor([101, 160, 197, 146, 182,   6,  59, 177,  38,  15], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.1696 Acc: 0.6657
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([191, 159,  87,  95, 151,   7, 133, 137,   5,  69], device='cuda:0') tensor([191, 159,  87,  95, 151,   7, 133, 174,   5,  69], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 1.5428 Acc: 0.5761
+
+Epoch 22/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:54
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([ 58, 189, 172,  51, 176, 102,  36, 124,  93,   1], device='cuda:0') tensor([ 61,  14, 172,  50, 176, 102,  42,  35,  93,   1], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([ 80, 126,  94, 121, 133, 102, 134,  53, 145, 131], device='cuda:0') tensor([ 80, 126, 175, 132, 133, 102, 134,  53, 140, 131], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.1623 Acc: 0.6703
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([  6, 178, 121, 133, 107, 137, 145,  81,  20,  51], device='cuda:0') tensor([  6, 153, 129, 133,  60, 137,  61, 107,  20,  51], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.5180 Acc: 0.6015
+
+Epoch 23/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([189, 193,  44,  89, 108,  79,  59,  85, 122,  40], device='cuda:0') tensor([187,  63,  44,  89, 108,  79,  59,  85, 122,  40], device='cuda:0') tensor(8, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 54, 123,  74, 184, 153, 109, 154, 115, 122, 135], device='cuda:0') tensor([ 54, 123,  17,  55,  42,  99, 160, 173, 122, 135], device='cuda:0') tensor(4, device='cuda:0') out of 10
+train Loss: 1.1760 Acc: 0.6568
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([107, 188, 179,  12, 192,  37, 128,  85, 188,  78], device='cuda:0') tensor([107, 188, 179,  12, 197, 167, 128,  85, 188,  53], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 1.5476 Acc: 0.5908
+
+Epoch 24/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:48
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([182,  10,   8, 174, 142,  65,   8, 154, 199,  82], device='cuda:0') tensor([183, 108,   8, 174, 142, 105,  37, 154, 199, 137], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 48, 174, 180, 123,  70, 157, 163,  78,  46, 138], device='cuda:0') tensor([ 48, 172, 180, 121,  70, 157, 163,  78,  46, 138], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.1228 Acc: 0.6810
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([156, 130,  67, 113, 161,  21,  13, 101, 184,  63], device='cuda:0') tensor([156, 109,  69,  53, 161,  68, 184, 101, 184,  61], device='cuda:0') tensor(4, device='cuda:0') out of 10
+val Loss: 1.3996 Acc: 0.6120
+UPDATE: tensor(0.6044, device='cuda:0', dtype=torch.float64) to tensor(0.6120, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 25/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 72, 166,  56, 132, 199, 134,  76,   8,  80,  72], device='cuda:0') tensor([ 72, 166,  56, 132, 199,  77,  76,   9,  80,  72], device='cuda:0') tensor(8, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.7188, device='cuda:0')
+tensor([ 97, 112,  38, 168,  67, 138,  45,  45, 152,  23], device='cuda:0') tensor([ 97, 149,  38, 168,  67, 138,  45,  45, 152,  23], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 1.1431 Acc: 0.6697
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 36,  17, 163, 165,  59,  29, 191,   1,  72, 132], device='cuda:0') tensor([ 36,  17, 163, 147,  83,  62, 191,  45,  74, 132], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.4198 Acc: 0.6069
+
+Epoch 26/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:48
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 36,  58,  70, 196,  25,  12,  18,  82,  82,  76], device='cuda:0') tensor([ 36,  63,  40, 196,  25,  12,  18,  82,  82,  68], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 28,  17,  69,  68,   6,  79, 182,  65,  40,  95], device='cuda:0') tensor([ 28,  24, 169, 135,   6,  79, 126,  65,  40,  95], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 1.1164 Acc: 0.6766
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([  6, 182,  70, 158, 187, 187, 126, 126,  30,  92], device='cuda:0') tensor([  6, 182,  70, 158, 101,  11, 132, 122,  32,  92], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.4822 Acc: 0.5877
+
+Epoch 27/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.7188, device='cuda:0')
+tensor([ 61,   0, 119, 177,  84, 139, 146, 199,  16, 111], device='cuda:0') tensor([146,   0, 119, 177,  84, 139, 146,  19,  16, 110], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.4375, device='cuda:0')
+tensor([ 91, 190,   1,  58, 123, 182,  20, 149,  13,  97], device='cuda:0') tensor([177, 190,   1,  63, 123, 182,  20, 149,  13,  97], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.1250 Acc: 0.6745
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([197, 199, 139, 123, 103, 199, 101, 119,  13,  75], device='cuda:0') tensor([198, 199,  41, 123, 149, 199, 101,  10,  13, 101], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.3901 Acc: 0.6120
+
+Epoch 28/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 69,  82, 152,  75, 145,  81, 133,  69,  42, 187], device='cuda:0') tensor([ 69,  82, 152, 130, 145, 193, 133,  69,  38, 187], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 36, 124,  48, 188,  90,  25, 105, 135, 140, 167], device='cuda:0') tensor([ 36, 124,  48, 188, 129,  25,  27, 135, 140, 167], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 1.0974 Acc: 0.6852
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([171, 112,  52, 142, 175,  49, 124,  39,  33, 154], device='cuda:0') tensor([ 46, 112,  52, 142, 175,  22,  87,  39, 135, 154], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 1.4507 Acc: 0.6145
+UPDATE: tensor(0.6120, device='cuda:0', dtype=torch.float64) to tensor(0.6145, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 29/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([170, 104, 196, 196, 123, 100, 131,  50,  71, 139], device='cuda:0') tensor([170,   3, 187, 125, 123,  85, 131,  50, 141, 139], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 69, 181, 152, 108, 172,  32, 106, 142, 104, 189], device='cuda:0') tensor([ 69, 181, 173, 108, 172,  32,  28,  52, 104, 189], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.1049 Acc: 0.6818
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([174,  76,  93, 183,  59, 150, 151, 160,  90, 127], device='cuda:0') tensor([174, 102,  93, 183,  58, 177, 150, 164,  37, 112], device='cuda:0') tensor(3, device='cuda:0') out of 10
+val Loss: 1.3678 Acc: 0.6210
+UPDATE: tensor(0.6145, device='cuda:0', dtype=torch.float64) to tensor(0.6210, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 30/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 19, 134, 119,  68, 180, 124,  99, 178,  25,  81], device='cuda:0') tensor([176,  77, 119,  68, 180, 122,  99, 155,  25,  99], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 16, 187, 162, 184, 115,  19, 163,  71,  40,  99], device='cuda:0') tensor([ 16, 187, 162, 184, 115,  19, 163,  71,  81,  99], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.9565 Acc: 0.7196
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 28,  31,  27, 179, 174,  12,   4, 123, 154,  68], device='cuda:0') tensor([ 28, 150,  27, 179, 174,  12,   4, 122, 154,  68], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 1.1457 Acc: 0.6674
+UPDATE: tensor(0.6210, device='cuda:0', dtype=torch.float64) to tensor(0.6674, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 31/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 81,  21, 114,  48, 190, 188,  37,  31,  69, 164], device='cuda:0') tensor([ 81,  35, 130,   8, 190, 188,  37, 116,  69, 164], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 91, 160, 122, 110,  89,  90, 131, 135,  35, 115], device='cuda:0') tensor([ 91, 160, 122, 110,  89, 153,  90, 137,  35, 115], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.8980 Acc: 0.7350
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([100, 134, 107, 111,   8,  88, 184,  99,  99, 138], device='cuda:0') tensor([  1, 177, 107, 111,  48,  88, 184, 109,  10, 138], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.0920 Acc: 0.6903
+UPDATE: tensor(0.6674, device='cuda:0', dtype=torch.float64) to tensor(0.6903, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 32/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:52
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([172, 113,  62,  36, 124, 140,  73,   9,  45, 144], device='cuda:0') tensor([125, 102,  58,  36,  95, 140,  73,   9,  45, 143], device='cuda:0') tensor(5, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 69,  95,  92, 182,  13,  34,  95, 147,  60,   0], device='cuda:0') tensor([ 69,  95,  92, 182,  13,  34,  95, 147,  58,  47], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.8311 Acc: 0.7511
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 31, 137, 185,  87, 117,   0,  40, 191,  63,  27], device='cuda:0') tensor([ 31, 137, 185, 120, 129,   0,  40,  75,  93,  27], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 1.0410 Acc: 0.6920
+UPDATE: tensor(0.6903, device='cuda:0', dtype=torch.float64) to tensor(0.6920, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 33/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:52
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 82, 136, 127, 130,  38, 104, 156,  60,  59,  14], device='cuda:0') tensor([ 82, 136, 127, 130,  38, 104, 156,   1,  61,  14], device='cuda:0') tensor(8, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([172, 191, 141,  26, 135, 179, 197, 194,  52, 112], device='cuda:0') tensor([179, 191,  28,  13, 135, 179, 123, 194,  52, 112], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 0.8005 Acc: 0.7590
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([187, 132,  55, 116,  13,  96,  70,  20, 113, 192], device='cuda:0') tensor([187, 132,  55, 120,  13,  96,  70,  20, 113, 192], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 1.0831 Acc: 0.6864
+
+Epoch 34/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 16,  62, 173, 114,  31,  70, 131,   3,  56, 185], device='cuda:0') tensor([ 16,  62, 173, 114,  31,  70, 131,   3,  56, 185], device='cuda:0') tensor(10, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 43, 171,  72, 193, 175,  59, 137, 116,  91, 110], device='cuda:0') tensor([ 43, 171,  72, 193, 175,  59, 137, 116, 117, 110], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7910 Acc: 0.7591
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 10, 181,  46, 174,   5, 182, 151,  38,  70, 156], device='cuda:0') tensor([ 10, 179,  46, 174,   5, 182, 151,  38,  32, 156], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 1.0424 Acc: 0.6960
+UPDATE: tensor(0.6920, device='cuda:0', dtype=torch.float64) to tensor(0.6960, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 35/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:54
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([ 60,  96,  48, 105,  66, 161,  73, 188,   7, 174], device='cuda:0') tensor([ 60,  96,  28, 105,  66, 161,  73, 188,   7, 174], device='cuda:0') tensor(9, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([  6,  95, 154, 120, 138, 172, 107, 137,  25,  68], device='cuda:0') tensor([  6,  95, 154, 120, 138, 172, 107, 137,   0,  42], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7767 Acc: 0.7619
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([104,  77,  31, 128, 185, 148, 148,  44, 187,  74], device='cuda:0') tensor([104,  83, 159, 128, 185,  98, 148,  44, 187,  74], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 1.0523 Acc: 0.6813
+
+Epoch 36/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([150, 180,  58, 112,  52,  56,  52,  36,   0,  30], device='cuda:0') tensor([152, 180,  58, 112,  52,  56,  52, 176,  49,  40], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 72 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([142,   8,  21, 145,  33, 192,  41, 154, 143,  38], device='cuda:0') tensor([142,   8,  21, 145,  37, 177, 138, 152, 143, 101], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 0.7777 Acc: 0.7626
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([134, 170, 195,  18, 113,   6, 117, 133, 113, 124], device='cuda:0') tensor([134, 170, 195,  18, 113,   6,  14, 133,  18, 123], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 1.0242 Acc: 0.6985
+UPDATE: tensor(0.6960, device='cuda:0', dtype=torch.float64) to tensor(0.6985, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 37/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([176,  67, 159,  93, 165,  44, 117,  98,  57, 127], device='cuda:0') tensor([176,  67,  48,  93, 165,  44, 118,  98,  57, 127], device='cuda:0') tensor(8, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.7188, device='cuda:0')
+tensor([ 16, 171, 176, 123,   5,  76, 196, 158, 130,  92], device='cuda:0') tensor([ 16, 171, 176, 123,   5,  46, 196, 158, 130,  92], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7690 Acc: 0.7670
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([110,  89,  28,  28, 121, 142, 151,  41,  33,  82], device='cuda:0') tensor([ 84,  89,  28,  28, 121, 142, 151,  41,  34,  82], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.9792 Acc: 0.7081
+UPDATE: tensor(0.6985, device='cuda:0', dtype=torch.float64) to tensor(0.7081, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 38/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([178,  18, 175, 153, 184,  33, 187, 164,  89, 119], device='cuda:0') tensor([154,  18, 175, 153, 184,  33, 187, 164,  89, 119], device='cuda:0') tensor(9, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.4062, device='cuda:0')
+tensor([134, 107,  59,  56,  24, 115, 170,  36, 144,  16], device='cuda:0') tensor([134, 107,  59,  56, 109, 115, 170,  36, 146,  16], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7465 Acc: 0.7719
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([190,   0,  53, 107, 100,  83, 116,  69,  48,   8], device='cuda:0') tensor([190,   7,  53, 106, 100, 105, 129,  69, 107,   8], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 1.0281 Acc: 0.6847
+
+Epoch 39/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 47,  46,  64,  64,  18, 173, 143, 106,  80, 117], device='cuda:0') tensor([ 47,  46,  60,  64, 162, 173, 144, 106,  80, 117], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.4375, device='cuda:0')
+tensor([145,  48,  95, 106,  58, 190, 132, 151, 185,  30], device='cuda:0') tensor([145,  48,  95, 106,  58,  92,  97, 151, 151, 153], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 0.7452 Acc: 0.7735
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.6875, device='cuda:0')
+tensor([ 50,  65, 187, 198, 176,  36, 148, 173, 189, 121], device='cuda:0') tensor([ 50,  60, 187, 198, 176,  36, 148, 173, 189, 121], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 1.0151 Acc: 0.7016
+
+Epoch 40/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 27,  52, 182,  76, 150,  99, 144, 110,  45, 191], device='cuda:0') tensor([ 27,  52, 183,  76, 150,  99, 142, 110, 141, 184], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([ 41, 130, 177,  62, 162,   8, 100, 124, 111,   8], device='cuda:0') tensor([190, 114, 177, 142, 162,   8, 100, 114, 111, 187], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 0.7328 Acc: 0.7762
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.7188, device='cuda:0')
+tensor([ 35, 116,  60,  69,  57,  32,  34, 128,  93,  31], device='cuda:0') tensor([ 35, 116,  60,  69, 140, 152,  33, 128,  93,  31], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.9777 Acc: 0.7059
+
+Epoch 41/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([151, 142, 102, 158, 134, 153,  97,  63,  91, 176], device='cuda:0') tensor([151,  83, 102, 158,  77, 153,  97,  59,  91, 176], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 95, 198, 157,  92, 118,  25,  54, 108,  27, 131], device='cuda:0') tensor([ 95, 198, 157,  92, 118,  25,  54, 108,  27, 184], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7385 Acc: 0.7685
+1 / 111 0 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([168, 104, 106,   7, 186, 122, 104,  55,  63, 101], device='cuda:0') tensor([168,  17,  43,  51, 186, 112, 104,  55,  63, 101], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.9778 Acc: 0.7135
+UPDATE: tensor(0.7081, device='cuda:0', dtype=torch.float64) to tensor(0.7135, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 42/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([117, 191,  86,  59, 153,  60, 172,  25,  38, 151], device='cuda:0') tensor([117, 191,  86,  59, 178,  59, 172,  25,  38, 151], device='cuda:0') tensor(8, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 42,   8,  49, 166,  42,  18,  91,  32,  18,  73], device='cuda:0') tensor([ 42,   8,  88, 166,  42,  18,  91,  32,  18,  73], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7299 Acc: 0.7750
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6875, device='cuda:0')
+tensor([159, 193,  97, 103,  58,  68,  86,  60, 121,  56], device='cuda:0') tensor([159, 193,  97, 103,  63,  68,  57,  60,  35,  56], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.9963 Acc: 0.6915
+
+Epoch 43/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:54
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([ 58,  28,  14, 132,  31, 159, 187, 103, 147, 191], device='cuda:0') tensor([ 58,   3, 110, 132, 146, 159, 187, 175, 147, 191], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([  6,  66,  48,  92,  28, 156,  40, 111,  35,  66], device='cuda:0') tensor([  6,  66,  48,  92,  28, 156,  40, 111,  35,  66], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.7503 Acc: 0.7696
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.3750, device='cuda:0')
+tensor([ 23, 128,  84, 159, 176, 173, 141,  77, 150, 140], device='cuda:0') tensor([ 23, 130,  63, 159, 176, 173,  60, 102,  96, 140], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 0.9968 Acc: 0.7149
+UPDATE: tensor(0.7135, device='cuda:0', dtype=torch.float64) to tensor(0.7149, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 44/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:47
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 75,  95, 116,  30,  53,  42,  99,  78, 188,  10], device='cuda:0') tensor([ 75, 163, 116,  30,  53,  39,  24,  78, 188,  10], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5000, device='cuda:0')
+tensor([150,  95, 132,   5, 183,  46,  70,  69, 167, 166], device='cuda:0') tensor([ 36,  15,  35,   5, 183,  46,  70,  69, 167, 166], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7251 Acc: 0.7671
+1 / 111 0 seconds
+ETA: 0:00:22
+Pseudolabel acc.: tensor(0.6562, device='cuda:0')
+tensor([108,  67, 176, 172,  80,  29, 115,  74,  93,  62], device='cuda:0') tensor([108,  67, 176, 172,  80,  29, 115,  74,  93,  62], device='cuda:0') tensor(10, device='cuda:0') out of 10
+val Loss: 0.9732 Acc: 0.7127
+
+Epoch 45/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:49
+Pseudolabel acc.: tensor(0.4688, device='cuda:0')
+tensor([ 83, 186, 136,  25, 163,  81, 169,  16, 183, 159], device='cuda:0') tensor([ 59, 186, 135,  25, 163,  81, 179,  16, 183, 156], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([ 20,  89, 152, 179,   9,  13,  95, 196,  81,  31], device='cuda:0') tensor([ 20,  89, 152, 160,   9,  53,  95, 196,  81,  31], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.6964 Acc: 0.7865
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 78,  99, 189,  70, 106, 179, 159, 110,  38,  29], device='cuda:0') tensor([ 78,  99, 190,  70, 107, 179, 159, 110, 132, 107], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.9618 Acc: 0.7121
+
+Epoch 46/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:53
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([146,  70, 107, 150, 190,   0, 140, 116, 183,  83], device='cuda:0') tensor([146,  70, 107,  90, 190,   0, 140, 118, 183,  65], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([  4, 176, 122,  12, 151,  68, 187,  23,  85, 120], device='cuda:0') tensor([  6, 176,  34, 137, 151,  68, 187,  23,  85, 173], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 0.6949 Acc: 0.7832
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.6250, device='cuda:0')
+tensor([126, 176, 126, 133, 195,  97,  55, 192,  95,  46], device='cuda:0') tensor([115, 176, 126, 133, 195, 155,  55, 119,  95,  46], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.9957 Acc: 0.7050
+
+Epoch 47/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:51
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([143, 156, 122,  91,  78, 193, 143, 124,  48,  85], device='cuda:0') tensor([143, 156, 122, 191,  68, 193, 140, 124,  48,  85], device='cuda:0') tensor(7, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([169,  85, 158, 198, 113, 189,   1, 182,  84,  82], device='cuda:0') tensor([169,  85, 158, 198,  70, 189,   1, 182,  73,  82], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.6987 Acc: 0.7833
+1 / 111 0 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([ 25, 141, 182, 175,  28, 182,  81,  77,  82, 116], device='cuda:0') tensor([ 11, 141, 182, 175,  28, 182,  68,  64,  82, 121], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.9960 Acc: 0.7076
+
+Epoch 48/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:50
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([189,  37,  51, 115, 192, 113,  74,  12, 174, 171], device='cuda:0') tensor([189,  37,  51, 115,  64, 113,  74,  12, 174, 171], device='cuda:0') tensor(9, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.6875, device='cuda:0')
+tensor([117, 188,  28,  53, 161,  80, 135,  74,   0,  87], device='cuda:0') tensor([117, 188,  26,  53, 161,  80, 135,  74,   0,  87], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7100 Acc: 0.7793
+1 / 111 0 seconds
+ETA: 0:00:23
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([175,  46,  80,  76, 157, 175, 154, 172,  13,   8], device='cuda:0') tensor([175,  46,  80,  76, 157, 175, 102, 167,  13,   8], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 1.0302 Acc: 0.6926
+
+Epoch 49/99
+----------
+Psuedolabeled run
+1 / 258 0 seconds
+ETA: 0:00:48
+Pseudolabel acc.: tensor(0.5625, device='cuda:0')
+tensor([ 33, 179,  25, 147, 150, 177, 187,  42, 112, 137], device='cuda:0') tensor([ 33, 166,  25, 178, 180, 177, 106,  42, 112, 137], device='cuda:0') tensor(6, device='cuda:0') out of 10
+201 / 258 71 seconds
+ETA: 0:00:20
+Pseudolabel acc.: tensor(0.5312, device='cuda:0')
+tensor([ 80, 192,  78,  58,  90,  12, 170, 128,  59, 126], device='cuda:0') tensor([ 80, 192, 164,  58,  90,  12, 170, 128,  59, 126], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7098 Acc: 0.7744
+1 / 111 0 seconds
+ETA: 0:00:21
+Pseudolabel acc.: tensor(0.5938, device='cuda:0')
+tensor([154,  94, 180, 132,  18, 152, 125, 158, 153, 161], device='cuda:0') tensor([154,  94,  82, 132,  18, 151, 125, 158, 153,  87], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.9730 Acc: 0.7104
+
+Epoch 50/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([134, 191,  27, 162,  36,  99,  64,  81, 166,  31], device='cuda:0') tensor([180, 191,  27, 162,  79,  99,  64,  81, 166,  30], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 1.0593 Acc: 0.7412
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 95, 179,  23, 190, 189,  80, 152,  13, 135,  80], device='cuda:0') tensor([ 95, 179, 105, 190, 189,  80, 152,  13, 134,  80], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.9494 Acc: 0.7761
+UPDATE: tensor(0.7149, device='cuda:0', dtype=torch.float64) to tensor(0.7761, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 51/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([112, 148,  63,  30,  40, 197, 123,  88,  91,  28], device='cuda:0') tensor([122, 148,  63,  30,  40, 193, 123,  88,  91,  28], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.9812 Acc: 0.7578
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 17,  71,  28,  36,  45,  98,   1,  98, 197,  73], device='cuda:0') tensor([ 17,  71,  48, 118,  45,  98,   1,  98, 197,  73], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.9272 Acc: 0.7828
+UPDATE: tensor(0.7761, device='cuda:0', dtype=torch.float64) to tensor(0.7828, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 52/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:25
+tensor([106, 102,  44, 192, 195, 179,  34,  41,   7,  47], device='cuda:0') tensor([106, 101,  44, 154, 195, 156,  34,  41,   7,  47], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.9382 Acc: 0.7647
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([143,  92,  89,   8, 118,  63, 159, 132,  80,  63], device='cuda:0') tensor([143,  80,  89,   8, 118,  63, 164, 132,  80,  63], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.8987 Acc: 0.7745
+
+Epoch 53/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 36,  23, 198,  79, 138, 125, 104, 100, 186,  87], device='cuda:0') tensor([101,  22, 198,  79,  16, 125,  21, 100, 186,  87], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 0.8872 Acc: 0.7784
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 18,  65, 192, 136,  33, 191,  40,  85,  11,  80], device='cuda:0') tensor([ 18,  65, 192, 136,  33, 191,  40,  85,  11,  80], device='cuda:0') tensor(10, device='cuda:0') out of 10
+val Loss: 0.8812 Acc: 0.7794
+
+Epoch 54/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([165,  48, 145, 184,  95, 113,  77,  15,  80, 128], device='cuda:0') tensor([165,  48, 145, 184,  95, 113,  77,  15,  78, 128], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.8570 Acc: 0.7919
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([103,  22,  64,  15, 194, 118, 130,  53, 134,  72], device='cuda:0') tensor([103,  22,  64,  15, 194, 118, 128,  53, 134,  72], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8211 Acc: 0.7828
+
+Epoch 55/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 41,  10, 148, 178, 174, 113,  68,  75, 198, 106], device='cuda:0') tensor([ 41,  10, 148, 153, 174,  22,  16,  75, 198, 106], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.8544 Acc: 0.7824
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([173, 181, 116,  45, 150, 156, 121,  71, 147, 129], device='cuda:0') tensor([173, 181, 116,  45, 153, 156, 121,  71, 147, 129], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.9066 Acc: 0.7662
+
+Epoch 56/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 76, 105,  45,  67,  92,  61, 157, 116,  52, 163], device='cuda:0') tensor([ 76, 105,  45,  67,  92,  61, 157, 116,  52, 163], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.8186 Acc: 0.7888
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 86,  30,  67,  33, 111,  57,  32, 179, 130,  42], device='cuda:0') tensor([ 89, 156,  69,  33,  77,  57,  76, 174, 130,  42], device='cuda:0') tensor(4, device='cuda:0') out of 10
+val Loss: 0.8293 Acc: 0.7811
+
+Epoch 57/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([100, 134,  99, 162, 143,  98, 186, 197, 196,  76], device='cuda:0') tensor([100, 134,  99, 112, 143,  98, 186, 197, 196,  76], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7992 Acc: 0.7964
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([  8,   9, 139, 165,  40, 147, 156, 176, 109, 139], device='cuda:0') tensor([  8,   9, 139, 165,  40, 147, 156, 176, 109, 139], device='cuda:0') tensor(10, device='cuda:0') out of 10
+val Loss: 0.8995 Acc: 0.7562
+
+Epoch 58/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 40, 191,  13, 171, 118,  14,  68, 153, 112,   6], device='cuda:0') tensor([ 40, 191,  13, 171, 118,  14,  68, 153, 112,  71], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7937 Acc: 0.7924
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 28, 157,  22,  70,  12,  87, 168,  40,  35,  97], device='cuda:0') tensor([ 28, 157,  22,  70,  12,  87,  21, 137, 124,  97], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.8595 Acc: 0.7927
+UPDATE: tensor(0.7828, device='cuda:0', dtype=torch.float64) to tensor(0.7927, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 59/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:28
+tensor([ 10, 164,  35,  20, 171,  97, 162,  91, 167,  27], device='cuda:0') tensor([ 10, 164,  35,  20, 171,  97, 162,  91, 167,  27], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.7452 Acc: 0.8087
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 28,  90,   7, 199,  57,  92,  19, 194,   2,   5], device='cuda:0') tensor([ 28, 139,   7, 199,  57,  92,  19, 194,   2,   5], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8405 Acc: 0.8043
+UPDATE: tensor(0.7927, device='cuda:0', dtype=torch.float64) to tensor(0.8043, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 60/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 37,  60,  73,  63, 156,  26, 125,  90, 118, 131], device='cuda:0') tensor([ 37,  60,  73,  63, 156,  26, 125,  90, 118, 131], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.7598 Acc: 0.8059
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 37,  63,  14,  13, 103,  24,  44,  20,   9,   9], device='cuda:0') tensor([ 37,  63,  14,  53, 103,  24,  44,  20,   9,   9], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8359 Acc: 0.7944
+
+Epoch 61/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 19,  39, 135, 151, 142,  96, 143, 189,  91, 107], device='cuda:0') tensor([ 19,  14, 135, 151, 145,  96, 143, 189, 113, 107], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7400 Acc: 0.8127
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([146,  57,   4,  30, 147, 120,  83, 161,  13, 153], device='cuda:0') tensor([ 41,  57,   4,  30, 147, 117,   1, 161,  13, 153], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.9367 Acc: 0.7645
+
+Epoch 62/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([172, 163, 162,  75,  95, 146, 180, 157, 196,  60], device='cuda:0') tensor([180, 158, 168,  75,  94, 146, 180, 157, 196,  70], device='cuda:0') tensor(5, device='cuda:0') out of 10
+train Loss: 0.7223 Acc: 0.8137
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 33,  62, 183, 170, 176,  28, 119,  87,  42, 107], device='cuda:0') tensor([ 33,  62, 183, 170, 176,  28, 119,  87,  42, 107], device='cuda:0') tensor(10, device='cuda:0') out of 10
+val Loss: 0.8482 Acc: 0.7927
+
+Epoch 63/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 77, 175, 111, 110,  19, 128,  91, 127, 155, 157], device='cuda:0') tensor([ 77, 175, 110, 110,  19, 128,  91, 127, 155, 157], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7657 Acc: 0.8089
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([131, 151,   2, 120, 192, 163,  38, 153,   6, 192], device='cuda:0') tensor([ 87, 151,   2, 120, 192, 163,  38, 153,   6, 192], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8937 Acc: 0.7778
+
+Epoch 64/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([128,  17, 134, 119, 138, 196,  85, 137, 147, 143], device='cuda:0') tensor([ 34,  17, 134, 119, 138, 196,  85, 137, 147, 143], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7869 Acc: 0.8026
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 97,  70,  14,  40,  24,   7, 115,  13, 101, 101], device='cuda:0') tensor([ 97, 149,  14,  40,  24,  62, 115,  13,  39, 101], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.8700 Acc: 0.7894
+
+Epoch 65/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([137, 168, 118, 143, 198,  71, 177,  69, 118,  78], device='cuda:0') tensor([137, 168, 153, 143, 198, 106, 177,  20, 118,  78], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7447 Acc: 0.8130
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([110,   8, 105,  38, 136,  41,  11, 197,  19,  66], device='cuda:0') tensor([170, 146, 105,  38, 136,  41,  11, 137,  19, 198], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.8388 Acc: 0.7960
+
+Epoch 66/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([162, 171, 166,  50,  44, 195,  83,   0,  67,  94], device='cuda:0') tensor([162, 171, 166,  50,  44, 195,  83,   0,  67,  94], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.7561 Acc: 0.8078
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 22, 138, 136,  96,  16, 160, 144,  85, 132,  38], device='cuda:0') tensor([ 60, 139, 136,  96,  16, 160, 144,  85, 132,  38], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.8281 Acc: 0.7778
+
+Epoch 67/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([153, 122, 144,   1,  26,  24,  67, 161,  19,  44], device='cuda:0') tensor([153, 122, 144,   1,  26,  23,  67, 161,  19,  61], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7652 Acc: 0.8101
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([116,  60, 191, 191,  33,  85,  35,  73, 153, 102], device='cuda:0') tensor([116,  57, 191, 191,  33,  85,  35,  14, 153, 102], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.8794 Acc: 0.7811
+
+Epoch 68/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 74,  52, 125,  51, 181,   3,  20, 111,  98, 183], device='cuda:0') tensor([ 74,  52, 125,  51, 181,   3,  20, 111,  98, 183], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.7674 Acc: 0.8092
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([188,  97, 123, 130, 116, 114, 121,  80,  33,  33], device='cuda:0') tensor([188,  97, 125, 130, 116, 114, 121,  80, 136,  33], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.8363 Acc: 0.7828
+
+Epoch 69/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([106,  94,   4,  85, 169,  87,  71,  23,  50, 110], device='cuda:0') tensor([ 48,  94,   4,  85, 169,  76, 145,  23,  50, 110], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7397 Acc: 0.8158
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([  5,  36, 182, 162, 160, 176, 108, 181,  28, 136], device='cuda:0') tensor([113,  42,  29,  11, 160, 176, 108, 181,  48, 136], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 0.8822 Acc: 0.7794
+
+Epoch 70/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:25
+tensor([ 67,  31, 196, 197,  26, 119,  16, 145,   7, 186], device='cuda:0') tensor([ 67,  31, 196, 198,  26, 119,  16,  44,  41, 186], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7235 Acc: 0.8191
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([199,  64, 102, 153,  52, 102,  62,  36, 109, 178], device='cuda:0') tensor([199,  64, 102, 153,  52,  36,  62, 155, 109, 178], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.9135 Acc: 0.7678
+
+Epoch 71/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([181, 101, 177, 133, 120,  55, 143,  23,  63, 191], device='cuda:0') tensor([181, 101, 177, 133, 120,  55, 143,  23,  63, 191], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.7166 Acc: 0.8156
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([188, 103, 137,  31,  80,  36, 126,  84,   7,  32], device='cuda:0') tensor([188, 103, 137,  31,  80,  36, 126,  24,   7,  32], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8900 Acc: 0.7728
+
+Epoch 72/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 71,  50, 175, 182, 166, 112,   8, 167, 190,  63], device='cuda:0') tensor([ 71,  50, 175, 182, 166, 112,   8, 167, 190,  61], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7090 Acc: 0.8194
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([161, 121, 122,  15,  84,  85,  42,  50,  17,  89], device='cuda:0') tensor([ 25, 121, 122,  15,  84,  85,  36,  50,  17,  89], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.8454 Acc: 0.7927
+
+Epoch 73/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([171,  79,  63,  33,  88,  30, 109,  87,  96,  44], device='cuda:0') tensor([171,  79,  63,  33,  88, 156,  13,  87,  81,  44], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7510 Acc: 0.8116
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 70, 129,  32, 106,  89, 162, 192,  39, 197, 197], device='cuda:0') tensor([ 70, 129,  30, 106,  89, 162, 192,  39, 147, 197], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.7756 Acc: 0.7894
+
+Epoch 74/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([  2, 114, 164,  13,  77,  38, 160,  66,   0, 178], device='cuda:0') tensor([  2, 114, 164,  14,  63,  34, 160,  66,   0, 178], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7646 Acc: 0.8068
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([167, 106,  92,   1, 160,   9, 184, 118,  67,  33], device='cuda:0') tensor([166,  11,  28,   1, 160,   9, 184, 118,  67,  33], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.8968 Acc: 0.7761
+
+Epoch 75/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([142, 155, 115,  84, 175,  62, 121,  28,  65,  20], device='cuda:0') tensor([142, 155, 130,  84, 175,  62, 121,  28,  65,  20], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7600 Acc: 0.8132
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([158,  36,  28, 173,  42,  22, 161,  18, 114,  64], device='cuda:0') tensor([158,  36,  28, 173,  42,  22, 161,  48, 114,  64], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.7978 Acc: 0.7977
+
+Epoch 76/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 53, 167,  48,  86, 173, 159, 186, 195,  88, 157], device='cuda:0') tensor([ 53, 167,  48,  86, 173, 159, 186, 195,  88, 157], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.7098 Acc: 0.8139
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([123, 196,  63, 106, 101,  80,  63,  28, 169, 115], device='cuda:0') tensor([199, 196,  63, 106, 101,  80,  63,  28, 169, 115], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.7952 Acc: 0.8043
+
+Epoch 77/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 57,  22,  19, 149, 162,   5, 143,  42,  23, 114], device='cuda:0') tensor([ 57,  22,  19, 149, 162,   5, 143,  20,  23, 149], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.6789 Acc: 0.8279
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 54,  51, 130, 190, 179, 191,  42, 161,   1, 131], device='cuda:0') tensor([ 54,  51, 130, 190, 176, 191,  42, 161,   1, 131], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8268 Acc: 0.7993
+
+Epoch 78/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 91,  60,  41,  15, 116,  57,  34, 137, 149, 143], device='cuda:0') tensor([ 91,  60,  41,  15, 116,  57, 139, 137,  87, 144], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7323 Acc: 0.8137
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([197,  85, 133,   5, 102,   9,  14, 112,  62,  37], device='cuda:0') tensor([197,  85, 133,   5, 102,   9,  14, 112,  64,  37], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8461 Acc: 0.7861
+
+Epoch 79/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 94, 142,  58,  97, 175, 126,  80, 129,  96,  35], device='cuda:0') tensor([ 94, 142,  58,  97, 175, 126,  80, 129,  96,  73], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7269 Acc: 0.8144
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 12,  78,  62,  18, 152, 100, 133,  60, 128, 192], device='cuda:0') tensor([ 72,  79,  62,  18, 152, 100, 133,  45, 128, 192], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.9140 Acc: 0.7695
+
+Epoch 80/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 47, 146,  86, 150,  37, 113, 198,  61,  27, 191], device='cuda:0') tensor([ 47, 146,  86,  96, 101, 113, 194,  61,  27, 191], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7394 Acc: 0.8146
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 85,   6, 100,  75, 152, 164, 192,  35, 116,  64], device='cuda:0') tensor([ 85,   6,  62,  75, 152, 164, 114,  35, 116,  64], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.8420 Acc: 0.8010
+
+Epoch 81/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([122, 198,  78,  92,  95,  87, 171,  99,   5,  93], device='cuda:0') tensor([ 14, 198,  78,  92,  95, 119, 171,  93,  78,  93], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 0.7334 Acc: 0.8146
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([  0,  96,  68,  69, 101,  40,  98,  91, 128,  53], device='cuda:0') tensor([  0,  96,  68,  69, 101,  40,  98,  91, 128, 192], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8101 Acc: 0.8126
+UPDATE: tensor(0.8043, device='cuda:0', dtype=torch.float64) to tensor(0.8126, device='cuda:0', dtype=torch.float64)
+Saving model to /users/tjiang12/scratch/student_CUB200_100_2020-12-08_00:00:36.447489
+
+Epoch 82/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 49, 145,  72,  38, 142,  19,  68, 149,  76,  22], device='cuda:0') tensor([ 49, 145,  72,  38, 142,  19,  68, 149,  76,  22], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.6816 Acc: 0.8298
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([152, 188,  17,  75,  85,   1,  62,  22, 185,  60], device='cuda:0') tensor([152, 188,  17,  75,  85, 150,  62,  60, 185,  35], device='cuda:0') tensor(7, device='cuda:0') out of 10
+val Loss: 0.9010 Acc: 0.7977
+
+Epoch 83/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 25,  30, 147, 182, 195,   7, 162, 154,  52,  95], device='cuda:0') tensor([ 25,  30, 147, 182, 195,  32, 162, 154,  52,  95], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7196 Acc: 0.8158
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 17,  10,  40, 113, 143,  62,  19, 189, 108, 154], device='cuda:0') tensor([ 17,  10,  40, 191, 143,  62,  19, 189, 108, 154], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8184 Acc: 0.7844
+
+Epoch 84/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([123,  30,  38,   7, 103,   0, 140,  46, 103, 137], device='cuda:0') tensor([123,  30,  38,  51, 103,   0, 140,  46, 103, 111], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.6957 Acc: 0.8236
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 85,  45, 113, 198, 188,  28,  76,  24, 156,  38], device='cuda:0') tensor([ 85,  85, 113, 192, 188,  28,  76,  24,  42, 118], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.8153 Acc: 0.7894
+
+Epoch 85/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 64, 100,  88,  26,  49, 171, 175,  74,  13, 145], device='cuda:0') tensor([ 64, 100,  88,  48,  49, 171, 175,  74,  13, 145], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7163 Acc: 0.8196
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([147, 113, 122,  34, 110,  25, 198, 115,  33,  59], device='cuda:0') tensor([147, 113, 122,  34, 118,  25, 197, 115,  68,  65], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.9130 Acc: 0.7728
+
+Epoch 86/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([138,  20,   3, 120, 188, 140,  91,  37, 180,  68], device='cuda:0') tensor([138,  20,   3, 120, 188, 144,  91, 150,  98,  68], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7016 Acc: 0.8213
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([185, 128,  25, 119, 152,  42, 160,  92, 160, 182], device='cuda:0') tensor([185, 128,  25, 119, 152,  42, 160,  92, 160, 182], device='cuda:0') tensor(10, device='cuda:0') out of 10
+val Loss: 0.8630 Acc: 0.7944
+
+Epoch 87/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([148, 101,  18,  90, 142,  30, 119, 145,  80,   7], device='cuda:0') tensor([194, 101,  84,  90, 142, 154, 119, 145,  80,   7], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7480 Acc: 0.8156
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([  7, 128, 122,  74,  64, 152, 179, 176,  53,  40], device='cuda:0') tensor([  7, 128, 122,  74,  64, 152, 172, 176,  53,  40], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8113 Acc: 0.7993
+
+Epoch 88/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 43, 111,  68,  36, 104, 145, 128,  62,  12, 125], device='cuda:0') tensor([ 43, 113,  68, 122,  91, 144, 128,  62,  12, 125], device='cuda:0') tensor(6, device='cuda:0') out of 10
+train Loss: 0.7170 Acc: 0.8179
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 92, 100, 141,  37, 106,  99, 117,  75,  38, 112], device='cuda:0') tensor([ 92, 100, 141,  37,  48,  99, 117,  75,  38, 112], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8536 Acc: 0.7877
+
+Epoch 89/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 78, 120,  84, 171, 159, 139, 127,  41, 126, 142], device='cuda:0') tensor([ 78,  40,  84, 171, 163, 139, 127,  41, 126, 142], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7317 Acc: 0.8177
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([181,   9,  71, 190, 158, 126,  12,  21,  84, 150], device='cuda:0') tensor([181,   9,  71, 190,  36, 126,  12,  21,  84, 150], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8110 Acc: 0.8093
+
+Epoch 90/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 54, 113, 142, 170, 114, 128, 169,  77, 158, 163], device='cuda:0') tensor([ 97, 113, 143, 170, 112, 128, 169,  77, 158, 163], device='cuda:0') tensor(7, device='cuda:0') out of 10
+train Loss: 0.7104 Acc: 0.8175
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 28, 143,  26, 181, 152, 128,  26,  98, 114, 140], device='cuda:0') tensor([ 28, 143,  48, 179, 152, 128,  28,  98, 191, 140], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.8752 Acc: 0.7910
+
+Epoch 91/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 62,  22,  88, 150, 155, 125, 184, 187,  38, 130], device='cuda:0') tensor([ 62,  22,  88, 150, 155, 125, 184, 187,  38, 130], device='cuda:0') tensor(10, device='cuda:0') out of 10
+train Loss: 0.6847 Acc: 0.8281
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([152,  62,  36, 162,   6, 150, 109, 130, 117, 154], device='cuda:0') tensor([152,  62,  36, 162,   6, 150, 109, 130, 117, 154], device='cuda:0') tensor(10, device='cuda:0') out of 10
+val Loss: 0.8488 Acc: 0.7761
+
+Epoch 92/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 45,  22, 150, 150,  26,  61, 162,  15, 174,  50], device='cuda:0') tensor([ 12,  22, 150, 150,  48,  61, 162,  15, 174,  50], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7271 Acc: 0.8161
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 11,  96,  12, 128,  22, 146, 132,  29,  13, 103], device='cuda:0') tensor([ 11,  95,  12, 128,  22, 146, 132,  29,  13, 130], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.9365 Acc: 0.7745
+
+Epoch 93/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([116, 173,  16, 132, 127, 150, 178, 164,  19,  88], device='cuda:0') tensor([148, 175,  16, 132, 127, 150, 178, 164,  19,  88], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.6869 Acc: 0.8265
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([  9, 110,   4,  63,   5,  40, 162, 151, 137,  91], device='cuda:0') tensor([  9, 188,   4,  63,   5, 126, 163, 151, 137,  21], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.8252 Acc: 0.7894
+
+Epoch 94/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 55, 195, 174, 103, 126, 168, 137, 185, 180, 172], device='cuda:0') tensor([ 55, 195, 174, 103, 126, 162, 137, 185, 180,  11], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7056 Acc: 0.8201
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 46, 168, 158,  15,  53,  95,  94,  63,   7,  96], device='cuda:0') tensor([ 46, 168,  36,  74,  53,  95,  94,  63,   7,  96], device='cuda:0') tensor(8, device='cuda:0') out of 10
+val Loss: 0.8973 Acc: 0.7828
+
+Epoch 95/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([ 69,   6,  87, 144, 195,  87, 179,  23, 136,   5], device='cuda:0') tensor([ 21,   6,  87, 144, 195,  87, 166,  23, 136,   5], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7218 Acc: 0.8208
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 30, 114, 146, 168, 182, 152,  61, 116, 125,  74], device='cuda:0') tensor([ 30, 114, 146,  36, 183, 152,  59, 116, 196,  74], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.7795 Acc: 0.8060
+
+Epoch 96/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([164,  41,  91, 175,  92,  66,  48, 156, 160, 161], device='cuda:0') tensor([164,  41,  91,  68,  92,  66,  48, 156, 175, 161], device='cuda:0') tensor(8, device='cuda:0') out of 10
+train Loss: 0.7281 Acc: 0.8236
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 80, 191,  89, 137, 176,  98,  49,  73, 168, 158], device='cuda:0') tensor([ 80, 191,  70,  82, 176,  98,  65,  14, 175, 158], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 0.7578 Acc: 0.8010
+
+Epoch 97/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:27
+tensor([ 87, 104, 129,  93, 155,  31,   3,   6,  79,  42], device='cuda:0') tensor([ 87, 104, 129,  93, 155,  30,   3,   6,  79,  42], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.6947 Acc: 0.8269
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 18, 139,  96, 125,  58,  59, 132, 196, 144,  42], device='cuda:0') tensor([ 18, 139,  96, 123,  58,  59, 132, 196, 144,  42], device='cuda:0') tensor(9, device='cuda:0') out of 10
+val Loss: 0.8448 Acc: 0.7877
+
+Epoch 98/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:26
+tensor([157, 182,  43,  19,   7,  65,  45,  41, 132, 107], device='cuda:0') tensor([157, 182,  43,  19,   7,  65,  45,  41, 132,  24], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.7191 Acc: 0.8177
+1 / 19 0 seconds
+ETA: 0:00:03
+tensor([ 21,  40,   5,  89,  34,  96,  80,  18,  84, 117], device='cuda:0') tensor([148, 128,   4,  89,  34,  96,  80, 163,  84, 117], device='cuda:0') tensor(6, device='cuda:0') out of 10
+val Loss: 0.8224 Acc: 0.7944
+
+Epoch 99/99
+----------
+Labeled run
+1 / 132 0 seconds
+ETA: 0:00:29
+tensor([169,  16,  97,  83, 122, 165,   6,  65, 178, 104], device='cuda:0') tensor([169,  16,  97, 110, 122, 165,   6,  65, 178, 104], device='cuda:0') tensor(9, device='cuda:0') out of 10
+train Loss: 0.6983 Acc: 0.8151
+1 / 19 0 seconds
+ETA: 0:00:04
+tensor([ 58,  63, 197,  99, 116, 160,  42,  53, 157, 156], device='cuda:0') tensor([ 59,  63,  27,  99, 118, 160,  42,  53,  79, 178], device='cuda:0') tensor(5, device='cuda:0') out of 10
+val Loss: 0.7572 Acc: 0.8010
+
+Training complete in 143m 27s
+Best val Acc: 0.812604
+Test set size: 1206
+tensor([ 60, 188, 192,  50, 143, 159,  83,   9,  98,   7, 111,   3, 117,  76,
+         34,  13, 164,  61, 105,   0, 158, 191,  13, 171, 197,  78, 104, 106,
+         73, 176,  32,  14], device='cuda:0')
+25 / 32 tensor(0.7812, device='cuda:0')

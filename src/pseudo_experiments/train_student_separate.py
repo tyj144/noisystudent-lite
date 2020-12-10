@@ -13,111 +13,60 @@ import os
 import copy
 import datetime
 import sys
+from shared import weights_path, data_path, gen_train_val, data_transforms, should_print
+from PseudolabelDataset import PseudolabelDataset
 
 is_local = len(sys.argv) == 2 and sys.argv[1] == 'local'
 NUM_EPOCHS = 100
-
-# path of weights transfered from CCV
-TEACHER_NAME = "resnet50_CUB200_66pct"
-TRAINED_MODEL_PATH = f"weights/{TEACHER_NAME}" if is_local else f"/users/tjiang12/scratch/{TEACHER_NAME}"
-
-# Transforms to apply to each image
-data_transforms = {
-    'train': transforms.Compose([
-        transforms.RandomResizedCrop(224),
-        transforms.RandomHorizontalFlip(),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    ]),
-    'val': transforms.Compose([
-        transforms.Resize(256),
-        transforms.CenterCrop(224),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    ]),
-}
+BATCH_SIZE = 32
 
 # Load smaller labeled set (CUB 200 2010)
 labeled_dataset_name = "CUB_200"
-labeled_data_dir = f"datasets/{labeled_dataset_name}" if is_local else f"/users/tjiang12/data/tjiang12/{labeled_dataset_name}"
+labeled_data_dir = data_path(labeled_dataset_name)
 labeled_dataset = datasets.ImageFolder(
     labeled_data_dir, data_transforms['train'])
+
+labeled_image_datasets = gen_train_val(labeled_dataset)
+labeled_dataloaders = {x: torch.utils.data.DataLoader(labeled_image_datasets[x], batch_size=BATCH_SIZE,
+                                              shuffle=True)
+               for x in ['train', 'val']}
+labeled_dataset_sizes = {x: len(labeled_image_datasets[x]) for x in ['train', 'val']}
 
 class_names = labeled_dataset.classes
 
 # Load larger unlabeled set (CUB 200 2011)
-unlabeled_dataset_name = "CUB_200_2011/CUB_200_2011/images"
-unlabeled_data_dir = f"datasets/{unlabeled_dataset_name}" if is_local else f"/users/tjiang12/data/tjiang12/{unlabeled_dataset_name}"
+unlabeled_data_dir = data_path("CUB_200_2011/CUB_200_2011/images")
 unlabeled_dataset = datasets.ImageFolder(
     unlabeled_data_dir, data_transforms['train'])
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-RUN_NAME = f"student_CUB200_{NUM_EPOCHS}_{str(datetime.datetime.now())}"
-PATH = f"weights/{RUN_NAME}" if is_local else f"/users/tjiang12/scratch/{RUN_NAME}"
+run_name = f"student_CUB200_{NUM_EPOCHS}_{str(datetime.datetime.now())}"
+PATH = weights_path(run_name)
 
-# Configure teacher model's architecture
+# path of weights transfered from CCV
+teacher_path = weights_path("resnet50_CUB200_66pct")
+
+# Configure teacher model's architecture and load in pre-trained model
 teacher = models.resnet50()
-
 # Augment last layer to match dimensions
-num_classes = 200
 num_ftrs = teacher.fc.in_features
-teacher.fc = nn.Linear(num_ftrs, num_classes)
+teacher.fc = nn.Linear(num_ftrs, len(class_names))
 
-teacher = teacher.to(device)
+model = teacher.to(device)
 
 # Load in trained model as teacher
-teacher.load_state_dict(torch.load(
-    TRAINED_MODEL_PATH, map_location=torch.device('cpu')))
+model.load_state_dict(torch.load(
+    teacher_path, map_location=torch.device('cpu')))
 
-sm = nn.Softmax(dim=1)
-
-# Write a dataloader that randomly picks either the pseudo labeled or correctly labeled data
-
-
-class StudentDataset(torch.utils.data.Dataset):
-
-    def __init__(self, teacher, labeled, unlabeled, transform=None):
-        self.teacher = teacher
-        self.teacher = self.teacher.to(device)
-        self.labeled = labeled
-        self.unlabeled = unlabeled
-
-    def __len__(self):
-        return len(self.labeled)
-        # return len(self.labeled) + len(self.unlabeled)
-
-    def __getitem__(self, idx):
-        if idx < len(self.labeled):
-            img, label = self.labeled.__getitem__(idx)
-            return img.to(device), label
-
-        # idx = idx - len(self.labeled)
-        # img, _ = self.unlabeled.__getitem__(idx)
-        # img = img.to(device)
-        # logits = self.teacher(torch.reshape(img, (1, 3, 224, 224)))
-        # probs = sm(logits)
-        # value, prediction = torch.max(probs, dim=1)
-        # pseudolabel = int(prediction)
-        # if value < 0.75:
-        #     return img, -1
-        # return img, pseudolabel
-
-
-combined_dataset = StudentDataset(teacher, labeled_dataset, unlabeled_dataset)
-
-val_size = int(0.3 * len(combined_dataset))
-train_size = len(combined_dataset) - val_size
-
-train_and_val = torch.utils.data.random_split(
-    combined_dataset, [train_size, val_size])
-
-image_datasets = dict(zip(['train', 'val'], train_and_val))
-dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=8,
+# Generate dataloaders for the labeled and pseudolabeled together
+pseudo_dataset = PseudolabelDataset(unlabeled_dataset, teacher=teacher, device=device)
+pseudo_image_datasets = gen_train_val(pseudo_dataset)
+pseudo_dataloaders = {x: torch.utils.data.DataLoader(pseudo_image_datasets[x], batch_size=BATCH_SIZE,
                                               shuffle=True)
                for x in ['train', 'val']}
-dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val']}
-print(dataset_sizes)
+pseudo_dataset_sizes = {x: len(pseudo_image_datasets[x]) for x in ['train', 'val']}
+# print(dataset_sizes)
 
 # Configure student model's architecture
 student = models.resnet50(pretrained=True)
@@ -126,17 +75,13 @@ student = models.resnet50(pretrained=True)
 num_classes = 200
 num_ftrs = student.fc.in_features
 student.fc = nn.Linear(num_ftrs, num_classes)
-
 student = student.to(device)
 
+f = open(run_name, "w")
 
-def should_print(i):
-    print_every = 15 if is_local else 200
-    return i % print_every == 0
-
-
-sm = nn.Softmax(dim=1)
-
+def print_write(*s):
+    print(*s, file=f)
+    print(*s)
 
 def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
     since = time.time()
@@ -147,8 +92,15 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
     # train for num_epochs
     for epoch in range(num_epochs):
-        print('Epoch {}/{}'.format(epoch, num_epochs - 1))
-        print('-' * 10)
+        print_write('Epoch {}/{}'.format(epoch, num_epochs - 1))
+        print_write('-' * 10)
+
+        if epoch % 2 == 0:
+            print_write("Labeled run")
+            dataloaders = labeled_dataloaders
+        else:
+            print_write("Psuedolabeled run")
+            dataloaders = pseudo_dataloaders
 
         # Each epoch has a phase: train and val
         for phase in ['train', 'val']:
@@ -166,24 +118,26 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
             num_noconf_labels = 0
             examples_used = 0
             for i, (inputs, labels) in enumerate(dataloaders[phase]):
+                if i == 1:
+                    break
                 valid = labels != -1
                 if torch.sum(valid) <= 0:
                     num_noconf_labels += 1
                     continue
-                # print(valid)
-                # print(inputs.shape)
+                # print_write(valid)
+                # print_write(inputs.shape)
                 inputs = inputs[valid]
                 labels = labels[valid]
                 examples_used += torch.sum(valid)
-                # print(torch.sum(valid))
-                # print(inputs.shape)
-                # print(labels.shape)
-                # print(labels)
+                # print_write(torch.sum(valid))
+                # print_write(inputs.shape)
+                # print_write(labels.shape)
+                # print_write(labels)
                 if should_print(i):
                     time_elapsed = time.time() - epoch_begin
-                    print(
+                    print_write(
                         i + 1, '/', len(dataloaders[phase]), int(time_elapsed), 'seconds')
-                    print('ETA:', datetime.timedelta(seconds=int(
+                    print_write('ETA:', datetime.timedelta(seconds=int(
                         (time_elapsed / (i + 1)) * (len(dataloaders[phase]) - i))))
                 inputs = inputs.to(device)
                 labels = labels.to(device)
@@ -214,30 +168,30 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
                 scheduler.step()
 
             print("Number of full -1 batches:", num_noconf_labels,
-                  "out of", int(len(dataloaders[phase]) / 8))
+                  "out of", int(len(dataloaders[phase]) / BATCH_SIZE))
             print("Number of examples used (enough conf.):", examples_used,
-                  "out of", len(dataloaders[phase]) * 8)
+                  "out of", len(dataloaders[phase]) * BATCH_SIZE)
 
             epoch_loss = running_loss / examples_used
             epoch_acc = running_corrects.double() / examples_used
 
-            print('{} Loss: {:.4f} Acc: {:.4f}'.format(
+            print_write('{} Loss: {:.4f} Acc: {:.4f}'.format(
                 phase, epoch_loss, epoch_acc))
 
             # deep copy the model
             if phase == 'val' and epoch_acc > best_acc:
-                print("UPDATE:", best_acc, "to", epoch_acc)
-                print("Saving model to", PATH)
+                print_write("UPDATE:", best_acc, "to", epoch_acc)
+                print_write("Saving model to", PATH)
                 best_acc = epoch_acc
                 best_model_wts = copy.deepcopy(model.state_dict())
                 torch.save(model.state_dict(), PATH)
 
-        print()
+        print_write()
 
     time_elapsed = time.time() - since
-    print('Training complete in {:.0f}m {:.0f}s'.format(
+    print_write('Training complete in {:.0f}m {:.0f}s'.format(
         time_elapsed // 60, time_elapsed % 60))
-    print('Best val Acc: {:4f}'.format(best_acc))
+    print_write('Best val Acc: {:4f}'.format(best_acc))
 
     # load best model weights
     model.load_state_dict(best_model_wts)

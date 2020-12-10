@@ -3,21 +3,30 @@ NoisyStudent Lite. Final project for CSCI 2952-C.
 
 
 ## TODOs
+Fix the pseudolabeling (teacher is spitting out only 46 or 47), which seems like
+it's not reading in model
+
+
 Figure out why it trains well with a batch size of 16 but not 8
-Abstract out dependencies between CUB200.py and pseudolabel.py
 Figure out how to mix image sets
 - Train on the mixed imaged set
 - Or, train separately on labeled and pseudolabeled set
-Add input noise per paper
+Add input noise per paper via RandAugment
 Add model noise per paper
 Train student (or teacher too) as a larger model (like ResNet-512)
 
+Potential fixes for pseudolabeling:
+- Balance the dataset
+- Balance the batch sizes
+
+Q: Do I use mean and stddev from ImageNet or from CUB 200?
 
 ## Extra time:
 Implement soft pseudo-labeling
 Baseline: train on both labeled sets together with a bigger model as a baseline
 
 
+DONE Abstract out dependencies between CUB200.py and pseudolabel.py
  
 DONE Train the small hymenoptera model on CCV or GCP as a test run.
 DONE Then, move the training of CUB onto it. Evaluate it on the test

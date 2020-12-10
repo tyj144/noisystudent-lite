@@ -12,56 +12,32 @@ from torch.optim import lr_scheduler
 import torch.optim as optim
 import torch.nn as nn
 import torch
-import os
 
-is_local = len(sys.argv) == 2 and sys.argv[1] == 'local'
+from shared import data_split, data_path, weights_path, should_print, data_transforms
+
+DATASET_NAME = "CUB_200"
 NUM_EPOCHS = 100
 BATCH_SIZE = 16
 
 plt.ion()   # interactive mode
 
-# Data augmentation and normalization for training
-# Just normalization for validation
-data_transforms = {
-    'train': transforms.Compose([
-        transforms.RandomResizedCrop(224),
-        transforms.RandomHorizontalFlip(),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    ]),
-    'val': transforms.Compose([
-        transforms.Resize(256),
-        transforms.CenterCrop(224),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    ]),
-}
-
-dataset_name = "CUB_200"
-data_dir = f"datasets/{dataset_name}" if is_local else f"/users/tjiang12/data/tjiang12/{dataset_name}"
+# Fetch the path to the dataset
+data_dir = data_path(DATASET_NAME)
+# Noise the labeled data
 dataset = datasets.ImageFolder(data_dir, data_transforms['train'])
+# Fetch the datasets with train-val split of 0.7 and 0.3
+image_datasets, test_set = data_split(dataset)
 
-val_size = int(0.3 * len(dataset))
-train_size = len(dataset) - val_size
-
-train_and_val = torch.utils.data.random_split(dataset, [train_size, val_size])
-
-image_datasets = dict(zip(['train', 'val'], train_and_val))
 dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=BATCH_SIZE,
                                               shuffle=True)
                for x in ['train', 'val']}
 dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val']}
-print(dataset_sizes)
 class_names = dataset.classes
+
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-RUN_NAME = f"resnet50_CUB200_{NUM_EPOCHS}_{str(datetime.datetime.now())}"
-PATH = f"weights/{RUN_NAME}" if is_local else f"/users/tjiang12/scratch/{RUN_NAME}"
-
-
-def should_print(i):
-    print_every = 15 if is_local else 200
-    return i % print_every == 0
+# Where to save the model
+WEIGHTS_PATH = weights_path(f"resnet50_{DATASET_NAME}_{NUM_EPOCHS}_{str(datetime.datetime.now())}")
 
 
 def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
@@ -135,10 +111,10 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
             # deep copy the model
             if phase == 'val' and epoch_acc > best_acc:
                 print("UPDATE:", best_acc, "to", epoch_acc)
-                print("Saving model to", PATH)
+                print("Saving model to", WEIGHTS_PATH)
                 best_acc = epoch_acc
                 best_model_wts = copy.deepcopy(model.state_dict())
-                torch.save(model.state_dict(), PATH)
+                torch.save(model.state_dict(), WEIGHTS_PATH)
 
         print()
 
@@ -150,6 +126,25 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
     # load best model weights
     model.load_state_dict(best_model_wts)
     return model
+
+def evaluate_model(model, test_set):
+    loader = torch.utils.data.DataLoader(test_set, batch_size=BATCH_SIZE)
+    print('Test set size:', len(test_set))
+    with torch.no_grad():
+        running_corrects = 0
+        seen = 0
+        for i, (inputs, labels) in enumerate(loader):
+            inputs = inputs.to(device)
+            labels = labels.to(device)
+
+            outputs = model(inputs)
+            _, preds = torch.max(outputs, 1)
+            running_corrects += torch.sum(preds == labels)
+            seen += len(inputs)
+            if should_print(i):
+                print(preds)
+                print(int(running_corrects), "/", seen, running_corrects / seen)
+    return running_corrects / seen
 
 
 model_ft = models.resnet50(pretrained=True)
@@ -170,46 +165,5 @@ exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=20, gamma=0.1)
 
 model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler,
                        num_epochs=NUM_EPOCHS)
-
-
-# def visualize_model(model, num_images=6):
-#     was_training = model.training
-#     model.eval()
-#     images_so_far = 0
-#     fig = plt.figure()
-
-#     with torch.no_grad():
-#         for i, (inputs, labels) in enumerate(dataloaders['val']):
-#             inputs = inputs.to(device)
-#             labels = labels.to(device)
-
-#             outputs = model(inputs)
-#             _, preds = torch.max(outputs, 1)
-
-#             for j in range(inputs.size()[0]):
-#                 images_so_far += 1
-#                 ax = plt.subplot(num_images//2, 2, images_so_far)
-#                 ax.axis('off')
-#                 ax.set_title('predicted: {}'.format(class_names[preds[j]]))
-#                 imshow(inputs.cpu().data[j])
-
-#                 if images_so_far == num_images:
-#                     model.train(mode=was_training)
-#                     return
-#         model.train(mode=was_training)
-
-
-# def imshow(inp, title=None):
-#     """Imshow for Tensor."""
-#     inp = inp.numpy().transpose((1, 2, 0))
-#     mean = np.array([0.485, 0.456, 0.406])
-#     std = np.array([0.229, 0.224, 0.225])
-#     inp = std * inp + mean
-#     inp = np.clip(inp, 0, 1)
-#     plt.imshow(inp)
-#     if title is not None:
-#         plt.title(title)
-#     plt.pause(0.001)  # pause a bit so that plots are updated
-
-
-# visualize_model(model_ft)
+                       
+accuracy = evaluate_model(model_ft, test_set)
