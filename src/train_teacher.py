@@ -128,6 +128,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
     return model
 
 def evaluate_model(model, test_set):
+    model.eval()
     loader = torch.utils.data.DataLoader(test_set, batch_size=BATCH_SIZE)
     print('Test set size:', len(test_set))
     with torch.no_grad():
