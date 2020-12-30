@@ -6,8 +6,8 @@ The best image recognition models as of 2020 are exceptionally good at classifyi
 Increasingly, the best models have relied on **semi-supervised learning**, a process which leverages hundreds of millions or billions of unlabeled images as extra training data to boost performance. These studies have largely been done by Google Brain or Facebook AI, which have access to storage and computational resources most researchers do not have. Thus, in this study, I examine whether the approach from one of these studies, "Self-training with Noisy Student", can boost a model’s ability to classify images and robustness to noise **even when applied at a smaller scale.**
 
 ## Project Structure
-All code used to train models are in `src/` folder. Final runs for the project are saved in the `runs/` folder. Experimental exploration and other
-notebooks can be found in the `experiments/` and `notebooks/` folders.
+All code used to train and evaluate models is in the `src/` folder. Training run output files are saved in the `runs/` folder. Experimental exploration and other
+notebooks are kept in the `experiments/` and `notebooks/` folders.
 
 Report can be found [here](https://github.com/tyj144/noisystudent-lite/blob/main/Report.pdf).
 
