@@ -1,4 +1,6 @@
-# Train a ResNet-50 pre-trained on ImageNet on CUB200.
+# Train a ResNet-50 pre-trained on ImageNet on hymenoptera dataset.
+# Used to test GPU training on CCV.
+# https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
 from __future__ import print_function, division
 import sys
 import copy
@@ -93,7 +95,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
                 # zero out the previous gradient
                 optimizer.zero_grad()
 
-                # dunno what this `with` does
                 with torch.set_grad_enabled(phase == 'train'):
                     # forward pass
                     outputs = model(inputs)

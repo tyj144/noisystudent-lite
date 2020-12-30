@@ -56,11 +56,11 @@ def data_split(dataset, val_pct=0.1, test_pct=0.2):
     return image_datasets, test_set
 
 def data_path(dataset_name):
-    prefix = "~/dev/noisystudent-lite/datasets/" if is_local else "/users/tjiang12/data/tjiang12/"
+    prefix = "datasets/" if is_local else "/users/tjiang12/data/tjiang12/"
     return os.path.join(prefix, dataset_name)
 
 def weights_path(run_name):
-    prefix = f"weights/" if is_local else f"/users/tjiang12/scratch/"
+    prefix = "weights/" if is_local else f"/users/tjiang12/scratch/"
     return os.path.join(prefix, run_name)
 
 def should_print(i):

@@ -78,15 +78,10 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
                 # zero out the previous gradient
                 optimizer.zero_grad()
 
-                # dunno what this `with` does
                 with torch.set_grad_enabled(phase == 'train'):
                     # forward pass
                     outputs = model(inputs)
                     _, preds = torch.max(outputs, 1)
-                    # if should_print(i):
-                    #     print(preds[:10], labels[:10], torch.sum(
-                    #         preds[:10] == labels[:10]), "out of", 10)
-                    #     print(preds.shape, labels.shape)
                     loss = criterion(outputs, labels)
 
                     if phase == 'train':

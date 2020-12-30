@@ -7,4 +7,6 @@ Increasingly, the best models have relied on **semi-supervised learning**, a pro
 
 ## Project Structure
 All code used to train models are in `src/` folder. Experimental runs and
-notebooks are in the `experiments` and `notebooks` folders.
+notebooks are in the `experiments/` and `notebooks/` folders.
+
+Credit to the [Brown University Center for Computation and Visualization (CCV)](https://ccv.brown.edu/) for computational resources for this project. Runs from those experiments are saved in the `runs/` folder.

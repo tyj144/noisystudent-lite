@@ -54,19 +54,17 @@ num_ftrs = teacher.fc.in_features
 teacher.fc = nn.Linear(num_ftrs, len(class_names))
 
 teacher = teacher.to(device)
-print(teacher_path)
+
 # Load in trained model as teacher
 teacher.load_state_dict(torch.load(
     teacher_path, map_location=torch.device('cpu')))
 
 # Generate dataloaders for the labeled and pseudolabeled together
-# pseudo_dataset = PseudolabelDataset(unlabeled_dataset, teacher=teacher, device=device)
 unlabeled_image_datasets = gen_train_val(unlabeled_dataset)
 unlabeled_dataloaders = {x: torch.utils.data.DataLoader(unlabeled_image_datasets[x], batch_size=BATCH_SIZE,
                                               shuffle=True)
                for x in ['train', 'val']}
 c_dataset_sizes = {x: len(unlabeled_image_datasets[x]) for x in ['train', 'val']}
-# print(dataset_sizes)
 
 # Configure student model's architecture
 student = models.resnet50(pretrained=True)
@@ -116,23 +114,9 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
             running_corrects = 0
 
             # get batch
-            # num_noconf_labels = 0
             examples_used = 0
             for i, (inputs, labels) in enumerate(dataloaders[phase]):
-                # valid = labels != -1
-                # if torch.sum(valid) <= 0:
-                #     num_noconf_labels += 1
-                #     continue
-                # # print_write(valid)
-                # # print_write(inputs.shape)
-                # inputs = inputs[valid]
-                # labels = labels[valid]
-                # examples_used += torch.sum(valid)
                 examples_used += len(inputs)
-                # print_write(torch.sum(valid))
-                # print_write(inputs.shape)
-                # print_write(labels.shape)
-                # print_write(labels)
                 if should_print(i):
                     time_elapsed = time.time() - epoch_begin
                     print_write(
@@ -154,7 +138,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
                 # zero out the previous gradient
                 optimizer.zero_grad()
 
-                # dunno what this `with` does
                 with torch.set_grad_enabled(phase == 'train'):
                     # forward pass
                     outputs = model(inputs)
@@ -174,11 +157,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
             if phase == 'train':
                 scheduler.step()
-
-            # print("Number of full -1 batches:", num_noconf_labels,
-            #       "out of", int(len(dataloaders[phase]) / BATCH_SIZE))
-            # print("Number of examples used (enough conf.):", examples_used,
-            #       "out of", len(dataloaders[phase]) * BATCH_SIZE)
 
             epoch_loss = running_loss / examples_used
             epoch_acc = running_corrects.double() / examples_used

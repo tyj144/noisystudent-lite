@@ -16,6 +16,8 @@ import sys
 from shared import weights_path, data_path, data_split, gen_train_val, data_transforms, should_print
 from randaugment import RandAugment
 
+# Adapted from PyTorch tutorial: https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
+
 is_local = len(sys.argv) == 2 and sys.argv[1] == 'local'
 NUM_EPOCHS = 100
 BATCH_SIZE = 32
@@ -123,23 +125,9 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
             running_corrects = 0
 
             # get batch
-            # num_noconf_labels = 0
             examples_used = 0
             for i, (inputs, labels) in enumerate(dataloaders[phase]):
-                # valid = labels != -1
-                # if torch.sum(valid) <= 0:
-                #     num_noconf_labels += 1
-                #     continue
-                # # print_write(valid)
-                # # print_write(inputs.shape)
-                # inputs = inputs[valid]
-                # labels = labels[valid]
-                # examples_used += torch.sum(valid)
                 examples_used += len(inputs)
-                # print_write(torch.sum(valid))
-                # print_write(inputs.shape)
-                # print_write(labels.shape)
-                # print_write(labels)
                 if should_print(i):
                     time_elapsed = time.time() - epoch_begin
                     print_write(
@@ -161,7 +149,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
                 # zero out the previous gradient
                 optimizer.zero_grad()
 
-                # dunno what this `with` does
                 with torch.set_grad_enabled(phase == 'train'):
                     # forward pass
                     outputs = model(inputs)
@@ -182,18 +169,13 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
             if phase == 'train':
                 scheduler.step()
 
-            # print("Number of full -1 batches:", num_noconf_labels,
-            #       "out of", int(len(dataloaders[phase]) / BATCH_SIZE))
-            # print("Number of examples used (enough conf.):", examples_used,
-            #       "out of", len(dataloaders[phase]) * BATCH_SIZE)
-
             epoch_loss = running_loss / examples_used
             epoch_acc = running_corrects.double() / examples_used
 
             print_write('{} Loss: {:.4f} Acc: {:.4f}'.format(
                 phase, epoch_loss, epoch_acc))
 
-            # deep copy the model (only on noisily labeled)
+            # deep copy the model (only on pseudo labeled data)
             if not train_on_pseudo and phase == 'val' and epoch_acc > best_acc:
                 print_write("UPDATE:", best_acc, "to", epoch_acc)
                 print_write("Saving model to", PATH)

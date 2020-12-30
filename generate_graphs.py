@@ -9,7 +9,7 @@ run_path = sys.argv[1]
 
 def parse_accuracies(run_path, type="val"):
     '''
-    Get all accuracies over time from a .out file.
+    Get all accuracies over time from a .out file in the `runs/` folder.
     '''
     with open(run_path) as f:
         l = f.read()
