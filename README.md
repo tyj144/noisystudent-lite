@@ -9,4 +9,6 @@ Increasingly, the best models have relied on **semi-supervised learning**, a pro
 All code used to train models are in `src/` folder. Experimental runs and
 notebooks are in the `experiments/` and `notebooks/` folders.
 
+Report can be found [here](https://github.com/tyj144/noisystudent-lite/blob/main/Report.pdf).
+
 Credit to the [Brown University Center for Computation and Visualization (CCV)](https://ccv.brown.edu/) for computational resources for this project. Runs from those experiments are saved in the `runs/` folder.
